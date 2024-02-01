@@ -8,7 +8,7 @@ function procurarCidade(){
     const cidadeParaConsultar = document.querySelector(".input-city").value;
     const hostname = window.location.hostname;
 
-    fetch(`http://${hostname}/processar-dados`, {
+    fetch(`https://${hostname}/processar-dados`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify({ cidade: cidadeParaConsultar }),
