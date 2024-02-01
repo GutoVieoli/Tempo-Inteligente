@@ -51,7 +51,7 @@ function preencherDadosHoje(dados){
     document.querySelector("#main__sens").innerHTML = "Sensação Térmica de " + (dados.main.feels_like).toFixed() + "º";
     document.querySelector("#main__desc").innerHTML = dados.weather[0].description;
     document.querySelector("#main__umidade").innerHTML = "Umidade: " + dados.main.humidity + "%";
-    document.querySelector("#img-previsao").src = `../public/images/${dados.weather[0].icon}.png`;
+    document.querySelector("#img-previsao").src = `/images/${dados.weather[0].icon}.png`;
 }
 
 function temperaturas5Dias(dados){
