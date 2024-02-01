@@ -11,7 +11,7 @@ const gerarPrompt = (tempo, cidade, pais, temperatura) => {
 function gerarMensagem(conteudoPrompt){
 
     const hostname = window.location.hostname;
-    fetch(`http://${hostname}/processar-mensagem`, {
+    fetch(`https://${hostname}/processar-mensagem`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify({ conteudoPrompt: conteudoPrompt }),
