@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -11,6 +12,10 @@ const porta = process.env.PORT || 3000;
 const keyWeather = process.env.KEY_WEATHER;
 const keyOpenai = process.env.OPENAI_API_KEY;
 
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+})
 
 app.post('/processar-dados', async (req, res) => {
     try{
