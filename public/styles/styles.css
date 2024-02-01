@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    /* linear-gradient(to bottom, rgba(17, 46, 75, 0.80), rgba(96, 145, 194, 0.75), rgba(134, 206, 248, 0.7), rgba(218, 243, 255, 0.9)), */
+    /* url("https://source.unsplash.com/1600x900/?landscape"); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.search{
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    /* position: absolute; */
+    margin-top: calc(50vh - 140px);
+    transition: margin-top 0.8s ease;
+}
+
+.search.active{
+    position: relative; 
+    margin-top: 0;
+}
+
+.input-city {
+    height: 55px;
+    border: 5px solid #ffffff;
+    background-color: #ffffff00;
+    backdrop-filter: blur(2px);
+    color: #ffffff;
+    outline: none;
+    padding: 6px 15px;
+    border-radius: 23px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+input::placeholder {
+    color: #e3e3e3;  
+    font-weight: 500;
+}
+
+
+.button-search{
+    border: none;
+    outline: none;
+    background-color: #ffffff00;
+    cursor: pointer;
+}
+
+.button-search__icon {
+    width: 50px;
+}
+
+main{
+    /* height: 88%; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.main-box {
+    /* background-color: #2b2b2b;
+    opacity: 0.75; */
+    backdrop-filter: blur(6px);
+    border: 2px solid rgb(255, 255, 255, 0.4);
+    border-radius: 25px;
+    padding: 20px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#main__cidade{
+    text-align: center;
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 6px;
+    font-style: italic;
+
+} 
+
+#main__temp{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#main__sens{
+    font-size: 14px;
+}
+
+#main__desc {
+    text-transform: capitalize;
+}
+
+#main__umidade{
+    font-size: 14px;
+}
+
+.main-box__sobre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.boxFive{
+    backdrop-filter: blur(6px);
+    border: 2px solid rgb(255, 255, 255, 0.4);
+    /* background-color: #2b2b2b;
+    opacity: 0.75; */
+    border-radius: 25px;
+    padding: 20px;
+    width: 400px;
+    font-size: 14px;
+}
+
+.noiteIcon_five, .diaIcon_five{
+    width: 55px;
+}
+
+#img-previsao{
+    width: 60px;
+}
+
+table, tbody{
+    width: 100%;
+}
+
+th, td{
+    width: 20%;
+    text-align: center;
+}
+
+
+.mensagemPersonalizada{
+    width: 55vw;
+    box-sizing: border-box;
+    background-color: hsla(298, 100%, 50%, 0.1);
+    backdrop-filter: blur(6px);
+    border: 2px solid rgb(255, 255, 255, 0.4);
+    border-radius: 25px;
+    padding: 15px; 
+    margin: 10px 0 30px 0; 
+}
+
+
+.main-box, 
+.boxFive, 
+.not_found,
+.boxMensagem{
+    visibility: hidden;
+    transform: translateX(-100vh);
+}
+
+.main-box.active, 
+.boxFive.active, 
+.not_found.active,
+.boxMensagem.active{
+    visibility: visible;
+    transform: translateX(0%);
+    transition: transform 1s ease;
+    transition-delay: .1s;
+}
+
+
+.not_found{
+    position: absolute;
+    text-align: center;
+    margin-top: -30px;
+    width: 100%;
+}
+
+.not_found img{
+    max-width: 65%;
+    max-height: 45vh;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+}
+
+.not_found p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Media query para telas menores que 600 pixels */
+@media screen and (max-width: 600px) {
+    /* Altera as propriedades do CSS para telas menores que 600 pixels */
+    #mensagemPersonalizada{
+        width: 90vw;
+    }
+  }
