@@ -91,26 +91,26 @@ function icone5Dias(dados){
 
             if(dados.list[i-1].sys.pod == 'd' && dias < 5){
                 if( Number(escolherIconeDoTempo(periodo)) <= 9){
-                    document.querySelectorAll(".diaIcon_five")[dias].src = `../public/images/0${escolherIconeDoTempo(periodo)}d.png`;
+                    document.querySelectorAll(".diaIcon_five")[dias].src = `/images/0${escolherIconeDoTempo(periodo)}d.png`;
                 }
                 else{
-                    document.querySelectorAll(".diaIcon_five")[dias].src = `../public/images/${escolherIconeDoTempo(periodo)}d.png`;
+                    document.querySelectorAll(".diaIcon_five")[dias].src = `/images/${escolherIconeDoTempo(periodo)}d.png`;
                 }
                 dias++;
             }
 
             else if(dados.list[i-1].sys.pod == 'n' && noites < 5){
                 if( Number(escolherIconeDoTempo(periodo)) <= 9){
-                    document.querySelectorAll(".noiteIcon_five")[noites].src = `../public/images/0${escolherIconeDoTempo(periodo)}n.png`;
+                    document.querySelectorAll(".noiteIcon_five")[noites].src = `/images/0${escolherIconeDoTempo(periodo)}n.png`;
                     if(dias == 0){
-                        document.querySelectorAll(".diaIcon_five")[dias].src = `../public/images/0${escolherIconeDoTempo(periodo)}d.png`;
+                        document.querySelectorAll(".diaIcon_five")[dias].src = `/images/0${escolherIconeDoTempo(periodo)}d.png`;
                         dias++
                     }
                 }
                 else {
-                    document.querySelectorAll(".noiteIcon_five")[noites].src = `../public/images/${escolherIconeDoTempo(periodo)}n.png`;
+                    document.querySelectorAll(".noiteIcon_five")[noites].src = `/images/${escolherIconeDoTempo(periodo)}n.png`;
                     if(dias == 0){
-                        document.querySelectorAll(".diaIcon_five")[dias].src = `../public/images/${escolherIconeDoTempo(periodo)}d.png`;
+                        document.querySelectorAll(".diaIcon_five")[dias].src = `/images/${escolherIconeDoTempo(periodo)}d.png`;
                         dias++
                     }
                 }
