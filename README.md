@@ -2,6 +2,8 @@
 
 Bem-vindo ao **Tempo Inteligente**! 🚀 Este é um aplicativo web de previsão do tempo que leva a experiência a um novo patamar. Desenvolvido com ❤️ em JavaScript puro, utilizando o poderoso Express.js para criar uma API REST robusta, nossa aplicação é hospedada em um plano gratuito pela On Render.
 
+O servidor estará acessível em [https://tempo-tech-ea0w.onrender.com](https://tempo-tech-ea0w.onrender.com).
+
 ## Como Funciona 🤖
 
 ### Frontend
@@ -43,8 +45,6 @@ O coração da operação reside no backend, construído com Node.js e o framewo
    ```bash
    npm run start
    ```
-
-   O servidor estará acessível em [https://tempo-tech-ea0w.onrender.com](https://tempo-tech-ea0w.onrender.com).
 
 
 
